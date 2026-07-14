@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enes Aktaş — backend-focused full-stack developer. Node.js, .NET, Python, Flutter.">
+  <title>Enes Aktaş — Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="logo" href="#">enesakt<span>.dev</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>Hi, I'm Enes.</h1>
+      <p class="tagline">Backend-focused full-stack developer — I build APIs with
+        Node.js/TypeScript, C#/.NET and Python, and mobile apps with Flutter.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">See my work</a>
+        <a class="btn" href="https://github.com/ENESAKT">GitHub profile</a>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <h2>About</h2>
+      <p>Computer engineer who cares about clean architecture, Docker-first local setups
+        and honest commit history. Every project below clones and runs with one command.</p>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3><a href="https://github.com/ENESAKT/yapyaptir">yapyaptir</a></h3>
+          <p>Local services marketplace with documented index &amp; query benchmarks.</p>
+          <p class="stack">TypeScript · Express · Drizzle · MySQL · Flutter</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/ENESAKT/trading-backtest-platform">trading-backtest-platform</a></h3>
+          <p>Self-hosted trading backtest platform with real-time market data workers.</p>
+          <p class="stack">FastAPI · ClickHouse · Redis</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/ENESAKT/ecommerce-api-dotnet">ecommerce-api-dotnet</a></h3>
+          <p>Layered e-commerce REST API following Onion Architecture.</p>
+          <p class="stack">.NET 9 · EF Core · PostgreSQL · JWT</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/ENESAKT/social-network-api">social-network-api</a></h3>
+          <p>Social network API with authenticated real-time messaging.</p>
+          <p class="stack">Node.js · Express · MS SQL Server · Socket.IO</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/ENESAKT/jwt-auth-starter">jwt-auth-starter</a></h3>
+          <p>Production-ready JWT boilerplate with refresh token rotation.</p>
+          <p class="stack">Node.js · MySQL · Flutter</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.com/ENESAKT/design-patterns-csharp">design-patterns-csharp</a></h3>
+          <p>GoF pattern catalog — thirteen realistic, runnable examples.</p>
+          <p class="stack">C# · .NET 9</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p><a href="mailto:enesaktas.ce@gmail.com">enesaktas.ce@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/enes-aktas-97672b359/">LinkedIn</a> ·
+        <a href="https://github.com/ENESAKT">GitHub</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="container">Built with plain HTML &amp; CSS — no frameworks, by design.</p>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const stored = localStorage.getItem("theme");
+    if (stored) root.dataset.theme = stored;
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const next = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+    });
+  </script>
+</body>
+</html>
